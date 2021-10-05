@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         BtnRe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Switch.setChecked(false);
             }
         });
     }
