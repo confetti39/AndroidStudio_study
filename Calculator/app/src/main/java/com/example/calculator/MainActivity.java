@@ -66,6 +66,5 @@ public class MainActivity<Stirng> extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }
