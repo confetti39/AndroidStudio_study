@@ -43,6 +43,12 @@
         android:id="@+id/BtnDiv"
         android:layout_margin="10dp"
         android:text="나누기" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnMod"
+        android:layout_margin="10dp"
+        android:text="나머지 값" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,4 +58,5 @@
         android:textColor="#FF0000"
         android:layout_margin="10dp"
         android:text="계산 결과: "/>
+
 </LinearLayout>
