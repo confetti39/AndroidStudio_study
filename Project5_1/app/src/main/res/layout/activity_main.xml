@@ -11,21 +11,21 @@
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:id="@+id/Btn1"
-        android:gravity="right||top"
+        android:gravity="right|top"
         android:text="버튼1"
         android:layout_gravity="center"/>
     <Button
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:id="@+id/Btn2"
-        android:gravity="left||center"
+        android:gravity="left|center"
         android:text="버튼2"
         android:layout_gravity="left"/>
     <Button
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:id="@+id/Btn3"
-        android:gravity="right||bottom"
+        android:gravity="right|bottom"
         android:text="버튼3"
         android:layout_gravity="right"/>
 
