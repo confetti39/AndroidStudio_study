@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         BtnMul = (Button)findViewById(R.id.BtnMul);
         BtnDiv = (Button)findViewById(R.id.BtnDiv);
         BtnMod = (Button)findViewById(R.id.BtnMod);
+        TextResult = (TextView)findViewById(R.id.TextResult);
 
         for(i = 0; i < numBtnIDs.length; i++){
             numButtons[i] = (Button)findViewById(numBtnIDs[i]);
