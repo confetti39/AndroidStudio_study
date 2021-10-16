@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Chronometer;
@@ -14,6 +16,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.sql.Array;
 import java.sql.Time;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rdoCal, rdoTime;
     CalendarView calView;
     TimePicker tPicker;
-    TextView tvYear, tvMonth, tvDay, tvHour, tvMinute;
+    TextView tvYear, tvMonth, tvDay, tvHour, tvMinute, book;
+    AutoCompleteTextView autoComplete;
     int selectYear, selectMonth, selectDay;
 
     @Override
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("시간 예약");
 
+        String[] items = { "CSI-뉴욕", "CSI-라스베가스", "CSI-마이애미", "Friends", "Fringe", "Lost" };
         btnStart = (Button)findViewById(R.id.btnStart);
         btnEnd = (Button)findViewById(R.id.btnEnd);
         chronometer = (Chronometer)findViewById(R.id.chronometer);
@@ -43,9 +48,14 @@ public class MainActivity extends AppCompatActivity {
         tvDay = (TextView)findViewById(R.id.tvDay);
         tvHour = (TextView)findViewById(R.id.tvHour);
         tvMinute = (TextView)findViewById(R.id.tvMinute);
+        autoComplete = (AutoCompleteTextView)findViewById(R.id.autoComplete);
+        book = (TextView)findViewById(R.id.book);
 
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items);
+        autoComplete.setAdapter(adapter);
 
         rdoCal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,11 +86,13 @@ public class MainActivity extends AppCompatActivity {
                 chronometer.stop();
                 chronometer.setTextColor(Color.BLUE);
 
+                String book1 = autoComplete.getText().toString();
                 tvYear.setText(Integer.toString(selectYear));
                 tvMonth.setText(Integer.toString(selectMonth));
                 tvDay.setText(Integer.toString(selectDay));
                 tvHour.setText(Integer.toString(tPicker.getCurrentHour()));
                 tvMinute.setText(Integer.toString(tPicker.getCurrentMinute()));
+                book.setText(book1);
             }
         });
 
