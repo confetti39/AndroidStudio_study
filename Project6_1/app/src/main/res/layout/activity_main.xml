@@ -7,12 +7,13 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Chronometer
-        android:id="@+id/chronometer1"
+    <TimePicker
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:format="시간 측정: %s"
-        android:gravity="center"
-        android:textSize="30dp" />
+        android:timePickerMode="spinner"/>
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"/>
 
 </LinearLayout>
