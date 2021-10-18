@@ -5,8 +5,8 @@
     android:background="#0000ff"
     android:gravity="center">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_launcher_foreground"/>
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
         android:textSize="20dp"
         android:text="TextView"/>
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_launcher_foreground"/>
 </LinearLayout>
