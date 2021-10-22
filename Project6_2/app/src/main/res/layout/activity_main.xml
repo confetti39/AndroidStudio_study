@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,41 +7,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여기는 서랍 밖입니다."
+        android:layout_gravity="center"/>
+    <SlidingDrawer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:content="@+id/content"
+        android:handle="@+id/handle">
+
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn1"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn2"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn3"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn4"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn5"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn6"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn7"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="btn8"/>
-    </LinearLayout>
-</ScrollView>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/handle"
+            android:text="서랍 손잡이"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:background="#00ff00"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여기는 서랍 안입니다."/>
+        </LinearLayout>
+
+    </SlidingDrawer>
+</LinearLayout>
