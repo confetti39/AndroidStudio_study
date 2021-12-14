@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_b"
+                    android:lineSpacingExtra="16sp"
+                    android:shadowColor="#29000000"
+                    android:shadowDy="3"
+                    android:shadowRadius="6"
+                    android:text="기온: "
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_date"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/item_tv_temper"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/nanum_b"
+                    android:shadowColor="#29000000"
+                    android:shadowDy="3"
+                    android:shadowRadius="6"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_temper_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_date"
+                    android:layout_marginTop="20dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="체감 온도: "
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/nanum_b"
+                    android:shadowColor="#29000000"
+                    android:shadowDy="3"
+                    android:shadowRadius="6"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_temper"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17dp"/>
+
+                <TextView
+                    android:id="@+id/item_tv_sensible"
+                    android:fontFamily="@font/nanum_b"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:shadowColor="#29000000"
+                    android:shadowDy="3"
+                    android:shadowRadius="6"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_feel_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_temper"
+                    android:layout_marginTop="17dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="겉옷: "
+                    android:fontFamily="@font/nanum_b"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_feel_"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:id="@+id/item_tv_outer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_r"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="38sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_outer_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_feel_"
+                    android:layout_marginTop="30dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상의: "
+                    android:fontFamily="@font/nanum_b"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_outer_"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:id="@+id/item_tv_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_r"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="38sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_top_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_outer_"
+                    android:layout_marginTop="12dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="하의: "
+                    android:fontFamily="@font/nanum_b"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_top"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:id="@+id/item_tv_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_r"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="38sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_bottom_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_top"
+                    android:layout_marginTop="12dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메모: "
+                    android:fontFamily="@font/nanum_b"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:id="@+id/item_tv_memo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_r"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="38sp"
+                    app:layout_constraintStart_toEndOf="@+id/item_tv_memo_"
+                    app:layout_constraintTop_toBottomOf="@+id/item_tv_bottom"
+                    android:layout_marginTop="12dp"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>
